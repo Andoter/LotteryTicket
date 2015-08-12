@@ -1,0 +1,74 @@
+package com.dsw.activity.view;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.dsw.constant.ConstantValues;
+import com.dsw.lotteryticket.R;
+import com.dsw.view.adapter.HomeAdapter;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+
+public class HomeUnlogin extends BaseUI{
+	private Context mcontext;
+	private ListView listView;
+	private HomeAdapter adapter;
+	public HomeUnlogin(Context context){
+		super(context);
+		this.mcontext = context;
+		
+	}
+	
+	public View getView(){
+		if(context == null){
+			return null;
+		}
+		
+		View view = LayoutInflater.from(mcontext).inflate(R.layout.unlogin_view, null);
+		listView = (ListView) view.findViewById(R.id.lottery_listview);
+		List<String> list = new ArrayList<String>();
+		list.add("1");list.add("1");list.add("1");
+		list.add("1");list.add("1");list.add("1");
+		list.add("1");list.add("1");list.add("1");
+		list.add("1");list.add("1");list.add("1");
+		list.add("1");list.add("1");list.add("1");
+		adapter = new HomeAdapter(mcontext, list);
+		listView.setAdapter(adapter);
+		return view;
+	}
+	@Override
+	public void init() {
+		contentView = LayoutInflater.from(context).inflate(R.layout.unlogin_view, null);
+		listView = (ListView) contentView.findViewById(R.id.lottery_listview);
+		List<String> list = new ArrayList<String>();
+		list.add("1");list.add("1");list.add("1");
+		list.add("1");list.add("1");list.add("1");
+		list.add("1");list.add("1");list.add("1");
+		list.add("1");list.add("1");list.add("1");
+		list.add("1");list.add("1");list.add("1");
+		adapter = new HomeAdapter(context, list);
+		listView.setAdapter(adapter);
+	}
+	@Override
+	public void setListener() {
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				
+			}
+		});
+		
+	}
+
+	@Override
+	public int getID() {
+		return ConstantValues.HOMEUNLOGIN_VIEW;
+	}
+}

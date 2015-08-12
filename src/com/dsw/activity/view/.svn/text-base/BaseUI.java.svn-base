@@ -1,0 +1,36 @@
+package com.dsw.activity.view;
+
+import android.content.Context;
+import android.view.View;
+
+public abstract class BaseUI {
+	protected Context context;
+	public BaseUI(Context context) {
+		this.context = context;
+		init();
+		setListener();
+	}
+	/**
+	 * 用于存储显示的的view，在ContentManager中进行加载
+	 */
+	protected View contentView;
+	
+	/**
+	 * 界面初始化
+	 */
+	public abstract void init();
+	
+	/**
+	 *设置监听 
+	 */
+	public abstract void setListener();
+	
+	/*
+	 * 获取页面view的id编号
+	 */
+	public abstract int getID();
+	
+	public View getContentView(){
+		return contentView;
+	}
+}

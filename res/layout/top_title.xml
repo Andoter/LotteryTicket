@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:id="@+id/top_title_common"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/id_buttom_bg">
+        <ImageView 
+			android:id="@+id/iv_back_common"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/id_title_goback"
+			android:layout_centerVertical="true"
+			android:contentDescription="@null"
+			android:layout_marginLeft="5dp"/>
+         <ImageView 
+			android:id="@+id/iv_help_common"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/id_title_help"
+			android:layout_centerVertical="true"
+			android:contentDescription="@null"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="5dp"/>
+         <TextView 
+             android:id="@+id/tv_title_content"
+             android:layout_toRightOf="@id/iv_back_common"
+             android:layout_toLeftOf="@id/iv_help_common"
+             android:layout_centerVertical="true"
+             android:layout_height="wrap_content"
+             android:layout_width="fill_parent"
+             android:layout_marginLeft="5dp"
+             android:layout_marginRight="5dp"
+             android:textColor="@android:color/white"
+             android:textSize="17sp"
+             android:gravity="center_horizontal"/>
+    </RelativeLayout>
+    
+    <!-- 未登陆时页面头 -->
+    <RelativeLayout
+        android:id="@+id/top_unlogin_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/id_title_bg"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/id_logo" />
+
+        <ImageView
+            android:id="@+id/iv_title_regist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@null"
+            android:background="@drawable/id_purchase_regist" />
+
+        <ImageView
+            android:id="@+id/iv_title_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:contentDescription="@null"
+            android:layout_toLeftOf="@id/iv_title_regist"
+            android:background="@drawable/id_purchase_login" />
+    </RelativeLayout>
+
+    <!-- 已经登陆标题 -->
+
+    <RelativeLayout
+        android:id="@+id/top_login_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/id_title_bg"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@null"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/id_cmc_logo" />
+
+        <ImageButton
+            android:id="@+id/ib_purchase_system_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:contentDescription="@null"
+            android:background="@drawable/id_purchase_system_info" />
+
+        <TextView
+            android:id="@+id/tv_top_user_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@id/ib_purchase_system_info"
+            android:text="@string/is_user_loginned_test" />
+    </RelativeLayout>
+
+</LinearLayout>

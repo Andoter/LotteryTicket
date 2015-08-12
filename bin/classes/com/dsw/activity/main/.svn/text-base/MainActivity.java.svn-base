@@ -1,0 +1,51 @@
+package com.dsw.activity.main;
+
+
+import com.dsw.activity.view.HomeUnlogin;
+import com.dsw.lotteryticket.R;
+import com.dsw.view.manager.BottomManager;
+import com.dsw.view.manager.ContentManager;
+import com.dsw.view.manager.TitleManager;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Window;
+import android.widget.RelativeLayout;
+
+public class MainActivity extends Activity {
+
+	private Activity _this;
+	private RelativeLayout relative_content;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		this.setContentView(R.layout.main_activity);
+		_this = this;
+		init();
+	}
+
+	private void init() {
+		TitleManager titleManager = TitleManager.getInstance();
+		titleManager.initView(_this);
+		titleManager.showUnLoginTitle();
+		
+		BottomManager bottomManager = BottomManager.getInstance();
+		bottomManager.init(_this);
+		bottomManager.showCommonBottom();
+		
+		relative_content = (RelativeLayout) _this.findViewById(R.id.relative_content);
+		//addUnloginView();
+		ContentManager contentManager = ContentManager.getInstance();
+		contentManager.setRelative_content(relative_content);
+		contentManager.changeUI(HomeUnlogin.class);
+	}
+
+	/*
+	 * ÃÌº”contentView“≥√Ê
+	 */
+	public void addUnloginView(){
+		HomeUnlogin homeView = new HomeUnlogin(_this);
+		relative_content.addView(homeView.getView());
+	}
+}

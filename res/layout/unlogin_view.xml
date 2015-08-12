@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical" >
+    
+	<com.dsw.ui.FocusedTextView 
+	    android:id="@+id/tv_notice_msg"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    
+	    android:gravity="center_vertical"
+	    android:text="山东体彩11选5加奖了，2600万元大放送	"
+	    android:singleLine="true"
+        android:ellipsize="marquee"
+	    android:background="@drawable/bottom_line"
+	    android:drawablePadding="5dp"
+	    android:padding="5dp"/>
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	    <TextView
+	        android:id="@+id/tv_luckyLoterry"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:text="@string/is_category_fc"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+	     <TextView
+	        android:id="@+id/tv_gameLoterry"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:text="@string/is_category_tc"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+	      <TextView
+	        android:id="@+id/tv_highLoterry"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:text="@string/is_category_gpc"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+	</LinearLayout>
+	 <ImageView
+        android:id="@+id/iv_category_selector"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:contentDescription="@null"
+        android:src="@drawable/id_category_selector" />
+	<!-- 
+	<ListView 
+	    android:id="@+id/lottery_listview"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:divider="#E6E6E6"
+	    android:dividerHeight="1dp"
+	    android:cacheColorHint="@android:color/transparent"
+	    android:listSelector="@android:color/transparent"/>
+	     -->
+	  <android.support.v4.view.ViewPager
+        android:id="@+id/ii_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

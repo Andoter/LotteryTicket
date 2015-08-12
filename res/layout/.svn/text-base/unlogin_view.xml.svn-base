@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical" >
+    
+	<TextView 
+	    android:id="@+id/tv_notice_msg"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:drawableLeft="@drawable/notice"
+	    android:gravity="center_vertical"
+	    android:text="山东体彩11选5加奖了，2600万元大放送	"
+	    android:singleLine="true"
+	    android:background="@drawable/bottom_line"
+	    android:drawablePadding="5dp"
+	    android:padding="10dp"/>
+	<ListView 
+	    android:id="@+id/lottery_listview"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:divider="#E6E6E6"
+	    android:dividerHeight="1dp"
+	    android:cacheColorHint="@android:color/transparent"
+	    android:listSelector="@android:color/transparent"/>
+</LinearLayout>

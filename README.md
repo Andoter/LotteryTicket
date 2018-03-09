@@ -10,4 +10,4 @@ this is a lotteryticket example,I'm test how to use git
 
 ### 测试Git
 
-### 从Dev修改
+### 从Dev修改,并提交
